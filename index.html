@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0D0F12" />
+  <meta name="description" content="Dominik Kael — strength & conditioning coach in Copenhagen. 1-on-1 coaching, squad HIIT and elite transformation programs at FORGE Studio." />
+  <title>Dominik Kael — Strength &amp; Conditioning Coach | FORGE Copenhagen</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="siteHeader">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#home" aria-label="FORGE Kael — home">
+        <span class="brand-mark">DK</span>
+        <span class="brand-text">FORGE<em>/</em>KAEL</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a class="nav-link" href="#bmi">Baseline</a></li>
+        <li><a class="nav-link" href="#programs">Programs</a></li>
+        <li><a class="nav-link" href="#results">Results</a></li>
+        <li><a class="nav-link" href="#schedule">Schedule</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <button class="btn btn-primary btn-sm js-open-modal" type="button">Get started</button>
+        <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============ MOBILE DRAWER ============ -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="drawer" id="drawer" aria-label="Mobile menu">
+    <div class="drawer-top">
+      <span class="brand-text">FORGE<em>/</em>KAEL</span>
+      <button class="icon-btn" id="drawerClose" type="button" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <a href="#bmi">Baseline</a>
+      <a href="#programs">Programs</a>
+      <a href="#results">Results</a>
+      <a href="#schedule">Schedule</a>
+    </nav>
+    <button class="btn btn-primary btn-block js-open-modal" type="button">Book free session</button>
+    <p class="drawer-meta">Refshalevej 167A · Copenhagen K<br />Mon–Sat · from 06:00</p>
+  </aside>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="hero-kicker"><span class="pulse-dot"></span>Taking 3 new clients for the winter block</p>
+          <h1 class="hero-title">Transform Your <span class="mark">Body</span>.<br />Master Your <span class="stroke">Mind</span>.</h1>
+          <p class="hero-sub">I'm Dominik Kael — CSCS, eleven years under the bar. I build strength you can see and habits that survive January. No detox teas, no hacks, no 12-day miracles. Just training that compounds.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary js-open-modal" type="button">Book a free session</button>
+            <a class="btn btn-ghost" href="#programs">See the programs</a>
+          </div>
+
+          <div class="hero-stats glass">
+            <div class="stat"><span class="stat-num" data-count="480" data-suffix="+">480+</span><span class="stat-label">Clients coached</span></div>
+            <div class="stat"><span class="stat-num" data-count="11600" data-format="comma">11,600</span><span class="stat-label">Kilos lost, combined</span></div>
+            <div class="stat"><span class="stat-num" data-count="1900" data-format="comma" data-suffix="+">1,900+</span><span class="stat-label">Certified hours</span></div>
+            <div class="stat"><span class="stat-num" data-count="11">11</span><span class="stat-label">Years under the bar</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <span class="ghost-word" aria-hidden="true">FORGE</span>
+          <div class="hero-frame">
+            <img src="https://picsum.photos/seed/forge-coach/760/920.jpg" alt="Dominik Kael coaching a heavy deadlift session at FORGE Studio" />
+          </div>
+          <div class="hero-badge glass">
+            <span class="badge-dot"></span>
+            <div><strong>Next free intro slot</strong><span>Saturday · 07:00</span></div>
+          </div>
+          <span class="hero-side-label" aria-hidden="true">FORGE STUDIO · COPENHAGEN · EST. 2014</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee-zone" aria-hidden="true">
+      <div class="marquee">
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <span>Heavy Hinges</span><i></i><span>Sweat Lab 45</span><i></i><span>Iron Hour</span><i></i><span>Engine Builder</span><i></i><span>Mobility Reset</span><i></i><span>Kettlebell Flow</span><i></i><span>Tempo Lab</span><i></i><span>Squad Showdown</span><i></i>
+            <span>Heavy Hinges</span><i></i><span>Sweat Lab 45</span><i></i><span>Iron Hour</span><i></i><span>Engine Builder</span><i></i><span>Mobility Reset</span><i></i><span>Kettlebell Flow</span><i></i><span>Tempo Lab</span><i></i><span>Squad Showdown</span><i></i>
+          </div>
+          <div class="marquee-group">
+            <span>Heavy Hinges</span><i></i><span>Sweat Lab 45</span><i></i><span>Iron Hour</span><i></i><span>Engine Builder</span><i></i><span>Mobility Reset</span><i></i><span>Kettlebell Flow</span><i></i><span>Tempo Lab</span><i></i><span>Squad Showdown</span><i></i>
+            <span>Heavy Hinges</span><i></i><span>Sweat Lab 45</span><i></i><span>Iron Hour</span><i></i><span>Engine Builder</span><i></i><span>Mobility Reset</span><i></i><span>Kettlebell Flow</span><i></i><span>Tempo Lab</span><i></i><span>Squad Showdown</span><i></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 01 · BMI ============ -->
+    <section class="section" id="bmi">
+      <div class="container">
+        <header class="sec-head reveal">
+          <span class="sec-index" aria-hidden="true">01</span>
+          <div>
+            <p class="sec-tag">Free tool</p>
+            <h2>Know your <em>baseline</em></h2>
+            <p class="sec-sub">BMI isn't the whole story — muscle mass skews it and it's never a verdict — but it's an honest starting point. Drop your numbers in and watch the needle.</p>
+          </div>
+        </header>
+
+        <div class="bmi-panel glass reveal">
+          <div class="bmi-controls">
+            <div class="field">
+              <label for="bmiHeight">Height <span class="unit">cm</span></label>
+              <input type="number" id="bmiHeight" min="100" max="250" step="0.5" inputmode="decimal" placeholder="178" autocomplete="off" />
+              <p class="field-err" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="bmiWeight">Weight <span class="unit">kg</span></label>
+              <input type="number" id="bmiWeight" min="30" max="300" step="0.1" inputmode="decimal" placeholder="76.5" autocomplete="off" />
+              <p class="field-err" aria-live="polite"></p>
+            </div>
+
+            <div class="bmi-result">
+              <span class="bmi-value" id="bmiValue">—</span>
+              <span class="bmi-cat" id="bmiCat">Awaiting your numbers</span>
+            </div>
+            <p class="bmi-note" id="bmiNote">Type your height and weight — the dial updates live, no button needed.</p>
+          </div>
+
+          <div class="bmi-gauge-wrap">
+            <svg class="bmi-gauge" viewBox="0 0 300 172" role="img" aria-label="BMI category dial">
+              <path class="gauge-track" d="M40 150 A110 110 0 0 1 260 150" />
+              <path class="seg" data-key="under" d="M40 150 A110 110 0 0 1 55.9 93.1" />
+              <path class="seg" data-key="normal" d="M55.9 93.1 A110 110 0 0 1 123.7 43.2" />
+              <path class="seg" data-key="over" d="M123.7 43.2 A110 110 0 0 1 189 47.2" />
+              <path class="seg" data-key="obese" d="M189 47.2 A110 110 0 0 1 260 150" />
+              <g id="bmiNeedle"><polygon points="150,62 145.5,150 154.5,150" /></g>
+              <circle class="gauge-hub" cx="150" cy="150" r="8.5" />
+              <text x="36" y="168" class="gauge-label">14</text>
+              <text x="256" y="168" class="gauge-label">40</text>
+            </svg>
+
+            <div class="bmi-legend">
+              <span class="bmi-chip" data-key="under"><i></i>Underweight</span>
+              <span class="bmi-chip" data-key="normal"><i></i>Normal</span>
+              <span class="bmi-chip" data-key="over"><i></i>Overweight</span>
+              <span class="bmi-chip" data-key="obese"><i></i>Obese</span>
+            </div>
+            <p class="bmi-fine">Dial range 14–40 · WHO categories. BMI ignores muscle mass — talk to me before it talks you out of the gym.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 · PROGRAMS & PRICING ============ -->
+    <section class="section" id="programs">
+      <div class="container">
+        <header class="sec-head reveal">
+          <span class="sec-index" aria-hidden="true">02</span>
+          <div>
+            <p class="sec-tag">Programs &amp; pricing</p>
+            <h2>Pick your <em>commitment</em> level</h2>
+            <p class="sec-sub">Same method, three levels of closeness. Every plan opens with the same free session — the only difference is how near I'm standing while you lift.</p>
+          </div>
+        </header>
+
+        <div class="billing-toggle reveal">
+          <div class="toggle-pill" id="billingPill" role="group" aria-label="Billing cycle">
+            <span class="toggle-thumb" aria-hidden="true"></span>
+            <button class="toggle-btn active" type="button" data-cycle="monthly">Monthly</button>
+            <button class="toggle-btn" type="button" data-cycle="yearly">Yearly <small>−20%</small></button>
+          </div>
+          <p class="billing-note" id="billingNote">Billed monthly · cancel anytime, no hard feelings.</p>
+        </div>
+
+        <div class="plans" id="plans">
+          <article class="plan reveal" style="--d:.05s">
+            <div class="plan-head">
+              <h3>Squad HIIT</h3>
+              <p class="plan-for">You train harder in a pack.</p>
+            </div>
+            <div class="plan-price-row">
+              <span class="plan-cur">€</span><span class="plan-price" data-m="89" data-y="71">89</span><span class="plan-per">/mo</span>
+            </div>
+            <p class="plan-cycle" data-m="Billed monthly. Pause anytime." data-y="Billed yearly — 2 months free.">Billed monthly. Pause anytime.</p>
+            <ul class="plan-features">
+              <li>4 coached group sessions / week</li>
+              <li>Forge app — full video library</li>
+              <li>Monthly body-comp check-in</li>
+              <li>Private community chat</li>
+              <li>No lock-in, pause anytime</li>
+            </ul>
+            <button class="btn btn-ghost btn-block js-open-modal" type="button" data-plan="Squad HIIT">Start with Squad</button>
+          </article>
+
+          <article class="plan plan-featured reveal" style="--d:.12s">
+            <span class="plan-ribbon">Most chosen</span>
+            <div class="plan-head">
+              <h3>Signature 1-on-1</h3>
+              <p class="plan-for">You want eyes on every rep.</p>
+            </div>
+            <div class="plan-price-row">
+              <span class="plan-cur">€</span><span class="plan-price" data-m="249" data-y="199">249</span><span class="plan-per">/mo</span>
+            </div>
+            <p class="plan-cycle" data-m="Billed monthly. Cancel with 30 days notice." data-y="Billed yearly — 2 months free.">Billed monthly. Cancel with 30 days notice.</p>
+            <ul class="plan-features">
+              <li>3 private sessions / week — every rep reviewed</li>
+              <li>Nutrition periodized around your training</li>
+              <li>Full Forge app + 400-exercise library</li>
+              <li>Weekly WhatsApp check-in &amp; adjustments</li>
+              <li>Open-gym floor access included</li>
+              <li>First dibs on workshops &amp; seminars</li>
+            </ul>
+            <button class="btn btn-primary btn-block js-open-modal" type="button" data-plan="Signature 1-on-1">Claim your intro week</button>
+          </article>
+
+          <article class="plan reveal" style="--d:.19s">
+            <div class="plan-head">
+              <h3>Elite Transformation</h3>
+              <p class="plan-for">You have a deadline — comp, wedding, shoot.</p>
+            </div>
+            <div class="plan-price-row">
+              <span class="plan-cur">€</span><span class="plan-price" data-m="449" data-y="359">449</span><span class="plan-per">/mo</span>
+            </div>
+            <p class="plan-cycle" data-m="Billed monthly. By application only." data-y="Billed yearly — 2 months free.">Billed monthly. By application only.</p>
+            <ul class="plan-features">
+              <li>Everything in Signature 1-on-1</li>
+              <li>Daily direct line to Dominik</li>
+              <li>Quarterly InBody + blood-panel review</li>
+              <li>Photoshoot, comp or wedding prep</li>
+              <li>Home / travel gym equipment plan</li>
+            </ul>
+            <button class="btn btn-ghost btn-block js-open-modal" type="button" data-plan="Elite Transformation">Apply for Elite</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 · TRANSFORMATIONS ============ -->
+    <section class="section" id="results">
+      <div class="container">
+        <header class="sec-head reveal">
+          <span class="sec-index" aria-hidden="true">03</span>
+          <div>
+            <p class="sec-tag">Transformations</p>
+            <h2>Proof beats <em>promises</em></h2>
+            <p class="sec-sub">Drag the handle. No filters, no 16-week miracles — just what three to four sessions a week actually does over months.</p>
+          </div>
+        </header>
+
+        <div class="results-grid">
+          <div class="ba-card glass reveal">
+            <div class="ba-slider" id="baSlider" style="--pos:50%">
+              <img id="baAfter" class="ba-img" src="https://picsum.photos/seed/forge-after-maja/1000/800.jpg" alt="Client after photo" />
+              <div class="ba-clip" id="baClip">
+                <img id="baBefore" class="ba-img" src="https://picsum.photos/seed/forge-before-maja/1000/800.jpg" alt="Client before photo" />
+              </div>
+              <div class="ba-handle" id="baHandle" role="slider" tabindex="0" aria-label="Before and after comparison" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+                <span class="ba-grip">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/><path d="M15 5l-7 7 7 7"/></svg>
+                </span>
+              </div>
+              <span class="ba-tag ba-tag-b">Before</span>
+              <span class="ba-tag ba-tag-a">After</span>
+            </div>
+
+            <div class="ba-meta">
+              <h3 id="baName">Maja L. · 34</h3>
+              <div class="ba-stats" id="baStats"></div>
+            </div>
+            <blockquote class="ba-quote" id="baQuote"></blockquote>
+          </div>
+
+          <div class="client-list reveal" style="--d:.1s" id="clientList">
+            <p class="client-note">Full archive lives on the studio wall — 480 stories and counting.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 · SCHEDULE ============ -->
+    <section class="section" id="schedule">
+      <div class="container">
+        <header class="sec-head reveal">
+          <span class="sec-index" aria-hidden="true">04</span>
+          <div>
+            <p class="sec-tag">Weekly timetable</p>
+            <h2>The <em>week</em> at Forge</h2>
+            <p class="sec-sub">Sixteen sessions a week at the studio. Filter by what your body needs — or what it fears. Usually the same thing.</p>
+          </div>
+        </header>
+
+        <div class="filter-row reveal" id="filterRow" role="group" aria-label="Filter sessions by category">
+          <button class="chip active" type="button" data-filter="all">All sessions <span></span></button>
+          <button class="chip" type="button" data-filter="strength">Strength <span></span></button>
+          <button class="chip" type="button" data-filter="hiit">HIIT <span></span></button>
+          <button class="chip" type="button" data-filter="cardio">Cardio <span></span></button>
+          <button class="chip" type="button" data-filter="mobility">Mobility <span></span></button>
+        </div>
+
+        <div class="week-grid" id="weekGrid">
+          <div class="day">
+            <h3 class="day-name">Mon</h3>
+            <article class="session cat-strength" data-cat="strength">
+              <span class="s-time">06:30</span>
+              <h4>Iron Hour</h4>
+              <p class="s-desc">Squat, press, pull — the bread and butter.</p>
+              <div class="s-foot"><span class="s-spots ok">5 spots left</span><button class="s-reserve js-reserve" type="button" data-session="Iron Hour · Mon 06:30">Reserve</button></div>
+            </article>
+            <article class="session cat-hiit" data-cat="hiit">
+              <span class="s-time">17:30</span>
+              <h4>Sweat Lab 45</h4>
+              <p class="s-desc">45 minutes. No hiding places.</p>
+              <div class="s-foot"><span class="s-spots low">2 spots left</span><button class="s-reserve js-reserve" type="button" data-session="Sweat Lab 45 · Mon 17:30">Reserve</button></div>
+            </article>
+            <article class="session cat-mobility" data-cat="mobility">
+              <span class="s-time">19:00</span>
+              <h4>Mobility Reset</h4>
+              <p class="s-desc">Hips, shoulders, spine — slow work.</p>
+              <div class="s-foot"><span class="s-spots ok">8 spots left</span><button class="s-reserve js-reserve" type="button" data-session="Mobility Reset · Mon 19:00">Reserve</button></div>
+            </article>
+            <p class="day-empty">Rest day. Recovery is training too.</p>
+          </div>
+
+          <div class="day">
+            <h3 class="day-name">Tue</h3>
+            <article class="session cat-cardio" data-cat="cardio">
+              <span class="s-time">07:00</span>
+              <h4>Engine Builder</h4>
+              <p class="s-desc">Zone 2 intervals on rower + bike.</p>
+              <div class="s-foot"><span class="s-spots ok">6 spots left</span><button class="s-reserve js-reserve" type="button" data-session="Engine Builder · Tue 07:00">Reserve</button></div>
+            </article>
+            <article class="session cat-strength" data-cat="strength">
+              <span class="s-time">18:00</span>
+              <h4>Heavy Hinges</h4>
+              <p class="s-desc">Deadlift and posterior chain day.</p>
+              <div class="s-foot"><span class="s-spots low">1 spot left</span><button class="s-reserve js-reserve" type="button" data-session="Heavy Hinges · Tue 18:00">Reserve</button></div>
+            </article>
+            <article class="session cat-mobility" data-cat="mobility">
+              <span class="s-time">19:30</span>
+              <h4>Yin &amp; Breath</h4>
+              <p class="s-desc">Down-regulation for wrecked humans.</p>
+              <div class="s-foot"><span class="s-spots ok">9 spots left</span><button class="s-reserve js-reserve" type="button" data-session="Yin &amp; Breath · Tue 19:30">Reserve</button></div>
+            </article>
+            <p class="day-empty">Rest day. Recovery is training too.</p>
+          </div>
+
+          <div class="day">
+            <h3 class="day-name">Wed</h3>
+            <article class="session cat-hiit" data-cat="hiit">
+              <span class="s-time">06:30</span>
+              <h4>Sweat Lab 45</h4>
+              <p class="s-desc">45 minutes. No hiding places.</p>
+              <div class="s-foot"><span class="s-spots ok">4 spots left</span><button class="s-reserve js-reserve" type="button" data-session="Sweat Lab 45 · Wed 06:30">Reserve</button></div>
+            </article>
+            <article class="session cat-cardio" data-cat="cardio">
+              <span class="s-time">17:30</span>
+              <h4>Kettlebell Flow</h4>
+              <p class="s-desc">Swings, cleans, carries — continuous.</p>
+              <div class="s-foot"><span class="s-spots low">3 spots left</span><button class="s-reserve js-reserve" type="button" data-session="Kettlebell Flow · Wed 17:30">Reserve</button></div>
+            </article>
+            <article class="session cat-mobility" data-cat="mobility">
+              <span class="s-time">19:00</span>
+              <h4>Mobility Reset</h4>
+              <p class="s-desc">Hips, shoulders, spine — slow work.</p>
+              <div class="s-foot"><span class="s-spots ok">7 spots left</span><button class="s-reserve js-reserve" type="button" data-session="Mobility Reset · Wed 19:00">Reserve</button></div>
+            </article>
+            <p class="day-empty">Rest day. Recovery is training too.</p>
+          </div>
+
+          <div class="day">
+            <h3 class="day-name">Thu</h3>
+            <article class="session cat-strength" data-cat="strength">
+              <span class="s-time">07:00</span>
+              <h4>Iron Hour</h4>
+              <p class="s-desc">Squat, press, pull — the bread and butter.</p>
+              <div class="s-foot"><span class="s-spots ok">5 spots left</span><button class="s-reserve js-reserve" type="button" data-session="Iron Hour · Thu 07:00">Reserve</button></div>
+            </article>
+            <article class="session cat-strength" data-cat="strength">
+              <span class="s-time">18:00</span>
+              <h4>Tempo Lab</h4>
+              <p class="s-desc">3-second eccentrics. Bring humility.</p>
+              <div class="s-foot"><span class="s-spots low">2 spots left</span><button class="s-reserve js-reserve" type="button" data-session="Tempo Lab · Thu 18:00">Reserve</button></div>
+            </article>
+            <article class="session cat-mobility" data-cat="mobility">
+              <span class="s-time">19:30</span>
+              <h4>Mobility Reset</h4>
+              <p class="s-desc">Hips, shoulders, spine — slow work.</p>
+              <div class="s-foot"><span class="s-spots ok">6 spots left</span><button class="s-reserve js-reserve" type="button" data-session="Mobility Reset · Thu 19:30">Reserve</button></div>
+            </article>
+            <p class="day-empty">Rest day. Recovery is training too.</p>
+          </div>
+
+          <div class="day">
+            <h3 class="day-name">Fri</h3>
+            <article class="session cat-cardio" data-cat="cardio">
+              <span class="s-time">06:30</span>
+              <h4>Engine Builder</h4>
+              <p class="s-desc">Zone 2 intervals on rower + bike.</p>
+              <div class="s-foot"><span class="s-spots ok">4 spots left</span><button class="s-reserve js-reserve" type="button" data-session="Engine Builder · Fri 06:30">Reserve</button></div>
+            </article>
+            <article class="session cat-hiit" data-cat="hiit">
+              <span class="s-time">17:00</span>
+              <h4>Friday Throwdown</h4>
+              <p class="s-desc">Partner WOD, loud playlist.</p>
+              <div class="s-foot"><span class="s-spots full">Full</span><button class="s-reserve js-reserve" type="button" data-session="Friday Throwdown · Fri 17:00 (waitlist)">Join waitlist</button></div>
+            </article>
+            <p class="day-empty">Rest day. Recovery is training too.</p>
+          </div>
+
+          <div class="day">
+            <h3 class="day-name">Sat</h3>
+            <article class="session cat-hiit" data-cat="hiit">
+              <span class="s-time">09:00</span>
+              <h4>Squad Showdown</h4>
+              <p class="s-desc">The week's send-off. All levels.</p>
+              <div class="s-foot"><span class="s-spots ok">6 spots left</span><button class="s-reserve js-reserve" type="button" data-session="Squad Showdown · Sat 09:00">Reserve</button></div>
+            </article>
+            <article class="session cat-strength" data-cat="strength">
+              <span class="s-time">10:30</span>
+              <h4>Long Hinge &amp; Flow</h4>
+              <p class="s-desc">Easy volume, technique focus.</p>
+              <div class="s-foot"><span class="s-spots low">3 spots left</span><button class="s-reserve js-reserve" type="button" data-session="Long Hinge &amp; Flow · Sat 10:30">Reserve</button></div>
+            </article>
+            <p class="day-empty">Rest day. Recovery is training too.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="cta-band">
+      <div class="container cta-inner">
+        <h2>The first session is <em>on me</em>.</h2>
+        <p>Sixty minutes: movement screen, goal talk, and a dead-honest answer on whether I'm the right coach for you. If not, you walk out with a plan anyway.</p>
+        <button class="btn btn-invert btn-lg js-open-modal" type="button">Claim your free session</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="f-brand">
+        <a class="brand" href="#home">
+          <span class="brand-mark">DK</span>
+          <span class="brand-text">FORGE<em>/</em>KAEL</span>
+        </a>
+        <p>Strength &amp; conditioning coaching for humans with jobs, kids and excuses — and the will to out-train them.</p>
+        <div class="social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 12c0-2.2-.2-3.7-.4-4.6-.2-.9-.9-1.6-1.8-1.8-1.4-.3-7.8-.3-7.8-.3s-6.4 0-7.8.3c-.9.2-1.6.9-1.8 1.8C2.2 8.3 2 9.8 2 12s.2 3.7.4 4.6c.2.9.9 1.6 1.8 1.8 1.4.3 7.8.3 7.8.3s6.4 0 7.8-.3c.9-.2 1.6-.9 1.8-1.8.2-.9.4-2.4.4-4.6z"/><path d="M10 9.2v5.6l5-2.8z" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="X"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M4 4l7.2 9.3L4.4 20h2.3l5.5-5.5L16.6 20H20l-7.5-9.7L18.9 4h-2.3l-4.9 5L7.4 4H4z" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+
+      <div class="f-col">
+        <h4>Studio hours</h4>
+        <ul>
+          <li>Mon–Fri · 06:00 – 21:00</li>
+          <li>Saturday · 08:00 – 16:00</li>
+          <li>Sunday · Closed — even coaches deload</li>
+        </ul>
+      </div>
+
+      <div class="f-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#bmi">BMI baseline</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#results">Transformations</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+        </ul>
+      </div>
+
+      <div class="f-col">
+        <h4>Find me</h4>
+        <ul>
+          <li>Refshalevej 167A<br />1432 Copenhagen K</li>
+          <li><a href="mailto:coach@forgekael.dk">coach@forgekael.dk</a></li>
+          <li><a href="tel:+4526841207">+45 26 84 12 07</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="year">2025</span> FORGE/KAEL · Built heavy in Copenhagen</p>
+      <p>BMI is a screening tool, not a diagnosis. Consult a professional before starting any program.</p>
+    </div>
+  </footer>
+
+  <!-- ============ BOOKING MODAL ============ -->
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="icon-btn modal-close" id="modalClose" type="button" aria-label="Close dialog">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+
+      <div class="modal-body" id="modalFormWrap">
+        <p class="sec-tag">Free intro session</p>
+        <h3 id="modalTitle">Book your 60 minutes</h3>
+        <p class="modal-sub">Tell me where you're at — I'll reply within 24 hours with two proposed slots.</p>
+
+        <form id="bookingForm" novalidate>
+          <div class="field">
+            <label for="bkName">Full name</label>
+            <input type="text" id="bkName" placeholder="Maja Lauridsen" autocomplete="name" />
+            <p class="field-err" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="bkEmail">Email</label>
+            <input type="email" id="bkEmail" placeholder="you@email.com" autocomplete="email" />
+            <p class="field-err" aria-live="polite"></p>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="bkGoal">Primary goal</label>
+              <select id="bkGoal" required>
+                <option value="" selected disabled>Choose…</option>
+                <option>Fat loss</option>
+                <option>Muscle &amp; strength</option>
+                <option>Athletic performance</option>
+                <option>Move &amp; feel better</option>
+              </select>
+              <p class="field-err" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="bkSlot">Preferred time</label>
+              <select id="bkSlot" required>
+                <option value="" selected disabled>Choose…</option>
+                <option>Early · 06:00–09:00</option>
+                <option>Midday · 11:00–14:00</option>
+                <option>Evening · 16:00–20:00</option>
+              </select>
+              <p class="field-err" aria-live="polite"></p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="bkNote">Anything I should know? <span class="opt">optional</span></label>
+            <textarea id="bkNote" rows="3" placeholder="Old injuries, a deadline, a favourite lift…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" id="bkSubmit">Send my request</button>
+          <p class="modal-fine">No spam, no pressure. One reply, two slots, your call.</p>
+        </form>
+      </div>
+
+      <div class="modal-body modal-success" id="modalSuccess" hidden>
+        <div class="success-badge" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="64" height="64" fill="none">
+            <circle cx="32" cy="32" r="30" stroke="#CCFF00" stroke-width="3" />
+            <path class="success-check" d="M19 33.5l9 9L46 23" stroke="#CCFF00" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <h3>You're in, <span id="successName">friend</span>.</h3>
+        <p>Your request for <strong id="successGoal">your goal</strong> landed. Check <strong id="successEmail">your inbox</strong> — two proposed slots are on the way within 24 hours.</p>
+        <button class="btn btn-ghost" id="successReset" type="button">Send another request</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
