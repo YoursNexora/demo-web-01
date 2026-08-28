@@ -313,11 +313,24 @@
     baQuote.textContent = '\u201c' + c.quote + '\u201d';
 
     slider.classList.add('switching');
+    
     let loaded = 0;
-    const done = () => { if (++loaded === 2) slider.classList.remove('switching'); };
-    bImg.onload = done; aImg.onload = done;
+    const done = () => {
+      loaded++;
+      if (loaded >= 2) {
+        slider.classList.remove('switching');
+        // Clean up event listeners to prevent memory leaks
+        bImg.onload = null; bImg.onerror = null;
+        aImg.onload = null; aImg.onerror = null;
+      }
+    };
+    
+    bImg.onload = done; bImg.onerror = done;
+    aImg.onload = done; aImg.onerror = done;
+    
     bImg.src = c.before;
     aImg.src = c.after;
+    
     setPos(50);
   }
   selectClient(0);
@@ -376,7 +389,16 @@
   let modalOpen = false, lastFocus = null;
 
   function openModal(prefill) {
+    if (modalOpen) return; // Prevent multiple triggers from stacking scroll locks
+    
     closeDrawer(); // never stack modal over the mobile drawer
+    
+    // Reset to form view if it was left on success screen
+    if (formWrap.hidden) {
+      successPane.hidden = true;
+      formWrap.hidden = false;
+    }
+    
     backdrop.classList.add('open');
     backdrop.setAttribute('aria-hidden', 'false');
     modalOpen = true;
@@ -385,13 +407,16 @@
     if (prefill && prefill.note) bkNote.value = prefill.note;
     setTimeout(() => { (formWrap.hidden ? modalClose : bkName).focus(); }, 80);
   }
+  
   function closeModal() {
+    if (!modalOpen) return;
     backdrop.classList.remove('open');
     backdrop.setAttribute('aria-hidden', 'true');
     modalOpen = false;
     lockScroll(false);
     if (lastFocus && lastFocus.focus) lastFocus.focus();
   }
+  
   modalClose.addEventListener('click', closeModal);
   backdrop.addEventListener('click', e => { if (e.target === backdrop) closeModal(); });
 
@@ -399,6 +424,7 @@
     return $$('button, input, select, textarea, a[href]', modal)
       .filter(el => !el.disabled && el.offsetParent !== null);
   }
+  
   function trapFocus(e) {
     if (e.key !== 'Tab') return;
     const f = focusables();
@@ -435,6 +461,7 @@
     setFieldError(el, msg);
     return !msg;
   }
+  
   function validateForm() {
     let ok = true, firstBad = null;
     const nameOk = validateField(bkName,
@@ -443,6 +470,7 @@
       EMAIL_RE.test(bkEmail.value.trim()) ? '' : 'That email doesn\u2019t look right.');
     const goalOk = validateField(bkGoal, bkGoal.value ? '' : 'Pick a goal — \u201call of the above\u201d isn\u2019t an option yet.');
     const slotOk = validateField(bkSlot, bkSlot.value ? '' : 'When could you actually show up?');
+    
     [ [bkName, nameOk], [bkEmail, emailOk], [bkGoal, goalOk], [bkSlot, slotOk] ]
       .forEach(pair => {
         if (!pair[1]) { ok = false; if (!firstBad) firstBad = pair[0]; }
