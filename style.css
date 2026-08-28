@@ -29,6 +29,7 @@
 html{
   scroll-behavior:smooth;
   scroll-padding-top:92px;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 html.no-scroll{ overflow:hidden; }
 
@@ -38,7 +39,7 @@ body{
   font-family:var(--font-b);
   font-size:16px;
   line-height:1.65;
-  overflow-x:hidden;
+  overflow-x:hidden; /* Prevent horizontal scroll */
   -webkit-font-smoothing:antialiased;
 }
 
@@ -58,10 +59,7 @@ button{ font-family:inherit; cursor:pointer; }
 
 .container{ width:min(1180px,92%); margin-inline:auto; }
 
-/* ---------- Reveal-on-scroll ----------
-   IMPORTANT: content is visible by default. The hidden state only
-   applies when JS is confirmed running (html.js), so a failed or
-   blocked script never leaves the page blank below the hero. */
+/* ---------- Reveal-on-scroll ---------- */
 html.js .reveal{
   opacity:0; transform:translateY(26px);
   transition:opacity .8s var(--ease-out), transform .8s var(--ease-out);
@@ -342,12 +340,10 @@ html.js .reveal.in{ opacity:1; transform:none; }
 /* ============================================================
    MARQUEE
    ============================================================ */
-/* Generous vertical padding so the rotated bar's corners never
-   clip into the hero stats above or the BMI section below. */
-.marquee-zone{ padding:2.4rem 0 2rem; }
+.marquee-zone{ padding:2.4rem 0 2rem; overflow: hidden; }
 .marquee{
   background:var(--lime); color:var(--lime-ink);
-  width:104vw; margin-left:-2vw;
+  width:110%; margin-left:-5%;
   transform:rotate(-1.2deg);
   padding:.85rem 0; overflow:hidden;
 }
@@ -503,9 +499,6 @@ input[type=number]{ -moz-appearance:textfield; appearance:textfield; }
   display:flex; align-items:center; gap:1.4rem; flex-wrap:wrap;
   margin-bottom:2.8rem;
 }
-/* Equal grid tracks guarantee the 50%-wide thumb sits exactly
-   behind whichever button is active, even though the labels
-   have different widths. */
 .toggle-pill{
   position:relative;
   display:grid; grid-template-columns:1fr 1fr;
